@@ -35,6 +35,10 @@ APP_LOAD_PARAMS += --path "44'/4218'"
 # Shimmer BIP-path
 APP_LOAD_PARAMS += --path "44'/4219'"
 
+# Ledger: add the "Pending security review" disclaimer
+APP_LOAD_PARAMS += --tlvraw 9F:01
+DEFINES += HAVE_PENDING_REVIEW_SCREEN
+
 ifeq ($(TARGET_NAME),TARGET_NANOS)
     ICONNAME=icons/nanos_app_shimmer.gif
 else
