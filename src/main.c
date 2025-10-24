@@ -21,6 +21,8 @@
 // define global SDK variables
 unsigned char G_io_seproxyhal_spi_buffer[IO_SEPROXYHAL_BUFFER_SIZE_B];
 
+// prototype definition
+unsigned short io_exchange_al(unsigned char channel, unsigned short tx_len);
 
 uint32_t timer_events;
 
