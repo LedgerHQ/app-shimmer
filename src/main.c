@@ -156,7 +156,7 @@ unsigned short io_exchange_al(unsigned char channel, unsigned short tx_len)
     }
     return 0;
 }
-#endif  // REVAMPED_IO
+#endif // REVAMPED_IO
 
 void io_seproxyhal_display(const bagl_element_t *element)
 {
