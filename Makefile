@@ -23,15 +23,12 @@ include $(BOLOS_SDK)/Makefile.defines
 
 APPVERSION_M = 0
 APPVERSION_N = 8
-APPVERSION_P = 6
+APPVERSION_P = 7
 APPVERSION   = "$(APPVERSION_M).$(APPVERSION_N).$(APPVERSION_P)"
 
 APP_LOAD_PARAMS = --path "44'/1'" --curve ed25519 --appFlags 0x240 $(COMMON_LOAD_PARAMS)
 
-
-ifeq ($(CHAIN),)
-CHAIN=iota
-endif
+CHAIN=shimmer
 
 # Check if chain is available
 ifeq ($(shell test -s ./makefile_conf/chain/$(CHAIN).mk && echo -n yes), yes)
@@ -148,4 +145,4 @@ include $(BOLOS_SDK)/Makefile.rules
 dep/%.d: %.c Makefile
 
 listvariants:
-	@echo VARIANTS CHAIN iota shimmer
+	@echo VARIANTS CHAIN shimmer
